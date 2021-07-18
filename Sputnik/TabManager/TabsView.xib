@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Abel-Regular.ttf">
+            <string>Abel-Regular</string>
+        </array>
+        <array key="Oxygen-Regular.ttf">
+            <string>Oxygen-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabsView" customModule="ThallesBrowser" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="8w2-Lt-rMg" id="T6S-BT-tZw"/>
+                <outlet property="lblTabsCount" destination="idR-WV-pey" id="yay-rB-IeC"/>
+                <outlet property="tabsList" destination="Hv4-dP-EJf" id="Pjz-Zd-z3q"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="668"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVV-2s-bi4">
+                    <rect key="frame" x="0.0" y="44" width="421" height="590"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8MU-Dr-AZD">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="590"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8w2-Lt-rMg">
+                    <rect key="frame" x="0.0" y="44" width="421" height="590"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="o4W-7I-Hay">
+                            <rect key="frame" x="0.0" y="0.0" width="421" height="590"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-dP-EJf">
+                                    <rect key="frame" x="0.0" y="0.0" width="421" height="544"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="vYr-VY-o6U"/>
+                                        <outlet property="delegate" destination="-1" id="hnt-5c-FHm"/>
+                                    </connections>
+                                </tableView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ao6-3g-uTm">
+                                    <rect key="frame" x="0.0" y="550" width="421" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GUIAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3le-GH-ojs">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                            <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="35"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="//001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idR-WV-pey">
+                                            <rect key="frame" x="139.5" y="0.0" width="42" height="40"/>
+                                            <fontDescription key="fontDescription" name="Oxygen-Regular" family="Oxygen" pointSize="17"/>
+                                            <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar2-L3-fSk">
+                                            <rect key="frame" x="215.5" y="0.0" width="130" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="VPL-vM-LZQ"/>
+                                                <constraint firstAttribute="height" constant="40" id="YbE-sz-viT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Oxygen-Regular" family="Oxygen" pointSize="15"/>
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                            <inset key="titleEdgeInsets" minX="15" minY="5" maxX="5" maxY="5"/>
+                                            <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                            <state key="normal" title="Nova Guia" image="theme.minimal.tab.new">
+                                                <color key="titleColor" systemColor="labelColor"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="didTapNewTab:" destination="-1" eventType="touchUpInside" id="YWb-EN-dNe"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rli-a6-1wH">
+                                            <rect key="frame" x="381" y="0.0" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="TLm-Un-wza"/>
+                                                <constraint firstAttribute="width" constant="40" id="hLr-oU-ujb"/>
+                                            </constraints>
+                                            <color key="tintColor" systemColor="systemRedColor"/>
+                                            <state key="normal" image="theme.minimal.tab.close"/>
+                                            <connections>
+                                                <action selector="didTapCloseView:" destination="-1" eventType="touchUpInside" id="q6A-c3-EZK"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Hv4-dP-EJf" firstAttribute="width" secondItem="o4W-7I-Hay" secondAttribute="width" id="0X2-JU-PE6"/>
+                                <constraint firstItem="ao6-3g-uTm" firstAttribute="width" secondItem="o4W-7I-Hay" secondAttribute="width" id="rj9-cr-RtD"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="o4W-7I-Hay" firstAttribute="top" secondItem="8w2-Lt-rMg" secondAttribute="top" id="BF8-za-WW6"/>
+                        <constraint firstAttribute="trailing" secondItem="o4W-7I-Hay" secondAttribute="trailing" id="Jaw-Vt-bDe"/>
+                        <constraint firstItem="o4W-7I-Hay" firstAttribute="leading" secondItem="8w2-Lt-rMg" secondAttribute="leading" id="YiN-kg-Njd"/>
+                        <constraint firstAttribute="bottom" secondItem="o4W-7I-Hay" secondAttribute="bottom" id="gon-fi-uks"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8w2-Lt-rMg" secondAttribute="bottom" id="3EF-8L-Wmr"/>
+                <constraint firstItem="XVV-2s-bi4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ggc-Ic-IGX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XVV-2s-bi4" secondAttribute="bottom" id="HXA-tc-ceu"/>
+                <constraint firstItem="XVV-2s-bi4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MYr-yv-SYh"/>
+                <constraint firstItem="8w2-Lt-rMg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SBl-jE-XjL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XVV-2s-bi4" secondAttribute="trailing" id="iae-dA-yEC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8w2-Lt-rMg" secondAttribute="trailing" id="j7h-5j-78E"/>
+                <constraint firstItem="8w2-Lt-rMg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="nTY-aQ-lmM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="163.04347826086959" y="203.57142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="theme.minimal.tab.close" width="14.828000068664551" height="14.828000068664551"/>
+        <image name="theme.minimal.tab.new" width="20.969999313354492" height="20.971000671386719"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
