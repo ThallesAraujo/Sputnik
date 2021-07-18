@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +13,43 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sputnik_bg_splash" translatesAutoresizingMaskIntoConstraints="NO" id="Akw-Z9-jR4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sputnik_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="HPs-g4-z7i">
+                                <rect key="frame" x="143" y="384" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="ME5-ga-3Ft"/>
+                                    <constraint firstAttribute="width" secondItem="HPs-g4-z7i" secondAttribute="height" multiplier="1:1" id="cNU-Wg-FpC"/>
+                                    <constraint firstAttribute="height" constant="128" id="j44-gq-bgn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HPs-g4-z7i" firstAttribute="centerY" secondItem="Akw-Z9-jR4" secondAttribute="centerY" id="I4y-Ga-xV4"/>
+                            <constraint firstItem="Akw-Z9-jR4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WG1-s9-4V9"/>
+                            <constraint firstItem="Akw-Z9-jR4" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="a6i-68-5pn"/>
+                            <constraint firstItem="HPs-g4-z7i" firstAttribute="centerX" secondItem="Akw-Z9-jR4" secondAttribute="centerX" id="jet-dC-RCy"/>
+                            <constraint firstAttribute="bottom" secondItem="Akw-Z9-jR4" secondAttribute="bottom" id="lRe-l6-vXN"/>
+                            <constraint firstItem="Akw-Z9-jR4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="onq-RU-NVB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sputnik_Icon" width="658" height="658"/>
+        <image name="sputnik_bg_splash" width="3095" height="7297"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

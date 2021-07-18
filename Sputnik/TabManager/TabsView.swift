@@ -136,7 +136,7 @@ extension TabsView: UITableViewDelegate, UITableViewDataSource{
                 
                 print("will remove tab \(indexPath.item)")
                 print("Current tabs (\(tabs.count))| \(tabs)")
-                self.delegate?.delegatedView.viewWithTag(indexPath.row)?.removeFromSuperview()
+                self.delegate?.delegatedView.subviews[indexPath.row].removeFromSuperview()
 //                self.mainVC?.view.viewWithTag(self.tabs?[indexPath.row].tag ?? 0)?.removeFromSuperview()
 //                self.delegate?.didTapRemoveTab(atIndex: indexPath.row)
                 self.tabsList.reloadData()
